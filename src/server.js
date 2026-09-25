@@ -19,7 +19,7 @@ app.use(cors({ origin: (origin, callback) => {
 } }));
 app.use(express.json({ limit: '10kb' }));
 
-app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
+app.get('/api/health', (req, res) => res.json({ mensaje:'Hola, servidor corriendo!' }));
 app.use('/api/auth', authRoutes);
 app.use('/api', protectedRoutes);
 app.use(notFound);
